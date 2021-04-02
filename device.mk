@@ -316,6 +316,8 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
 
 # Kernel
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)-kernel/kernel
 
 PRODUCT_COPY_FILES += \
