@@ -165,6 +165,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
     
+## Compile SystemUI on device with `speed`.
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
+
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
