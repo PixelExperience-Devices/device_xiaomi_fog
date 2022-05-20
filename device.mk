@@ -161,6 +161,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.volume.filenames_mode=aes-256-cts \
     ro.crypto.volume.metadata.method=dm-default-key
 
+# Dexpreopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+    
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
