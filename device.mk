@@ -160,6 +160,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
+    fstab.zram \
     init.fog.rc \
     init.fog.perf.rc \
     init.target.rc \
