@@ -16,6 +16,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Inherit from vendor
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
 
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
