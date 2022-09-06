@@ -53,6 +53,7 @@ void property_override(string prop, string value)
 }
 
 void load_redmi_fog() {
+    property_override("bluetooth.device.default_name", "Redmi 10C");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "fog");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -63,6 +64,7 @@ void load_redmi_fog() {
 }
 
 void load_redmi_fog_global2() {
+    property_override("bluetooth.device.default_name", "Redmi 10 Power");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "fog");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -73,6 +75,7 @@ void load_redmi_fog_global2() {
 }
 
 void load_redmi_fog_in() {
+    property_override("bluetooth.device.default_name", "Redmi 10");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "fog");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -83,6 +86,7 @@ void load_redmi_fog_in() {
 }
 
 void load_redmi_rain() {
+    property_override("bluetooth.device.default_name", "Redmi 10C");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "rain");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -93,6 +97,7 @@ void load_redmi_rain() {
 }
 
 void load_redmi_wind() {
+    property_override("bluetooth.device.default_name", "Redmi 10C");
     property_override("ro.product.brand", "Redmi");
     property_override("ro.product.device", "wind");
     property_override("ro.product.manufacturer", "Xiaomi");
