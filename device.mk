@@ -212,9 +212,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.sf.force_hwc_brightness=1
+
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
-    ro.sf.force_hwc_brightness=1 \
     ro.vendor.display.dither=true \
     ro.vendor.display.mi_calib.enable=true \
     ro.vendor.display.sensortype=2 \
