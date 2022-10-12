@@ -294,6 +294,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 # Media
+PRODUCT_ODM_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_khaje.xml
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.aac_51_output_enabled=true \
     media.stagefright.enable-aac=true \
