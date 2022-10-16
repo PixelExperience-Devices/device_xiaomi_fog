@@ -151,8 +151,17 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir / Init files
 PRODUCT_PACKAGES += \
+    init.qti.dcvs.sh \
+    init.qti.early_init.sh
+
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom_ramdisk \
     init.fog.rc \
-    init.fog.perf.rc
+    init.fog.perf.rc \
+    init.target.rc \
+    init.xiaomi.rc \
+    ueventd.fog.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
@@ -176,11 +185,26 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# SoC
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.soc.manufacturer=QTI
+
 # Update Engine
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+# USB
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
+    $(LOCAL_PATH)/init/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.usb.config=mtp,adb
 
 # Verified Boot
 PRODUCT_COPY_FILES += \
