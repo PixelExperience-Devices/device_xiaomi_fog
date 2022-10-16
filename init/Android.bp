@@ -44,6 +44,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.xiaomi.fingerprint.rc",
+    src: "init.xiaomi.fingerprint.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "ueventd.fog.rc",
     filename: "ueventd.rc",
     src: "ueventd.fog.rc",
