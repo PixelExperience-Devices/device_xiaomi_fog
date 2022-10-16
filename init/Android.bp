@@ -1,0 +1,30 @@
+//
+// Copyright (C) 2022 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit_fog",
+    recovery_available: true,
+    shared_libs: ["libbase"],
+    srcs: ["init_fog.cpp"],
+    include_dirs: [
+        "system/core/init",
+        "system/libbase/include"
+    ]
+}
+
+prebuilt_etc {
+    name: "init.fog.rc",
+    src: "init.fog.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.fog.perf.rc",
+    src: "init.fog.perf.rc",
+    sub_dir: "init",
+    vendor: true,
+}
