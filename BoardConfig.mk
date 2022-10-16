@@ -44,6 +44,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 # Assert
 TARGET_OTA_ASSERT_DEVICE := fog,wind,rain
 
+# Audio
+TARGET_PROVIDES_AUDIO_EXTNS := true
+
 # AVB
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
@@ -121,6 +124,9 @@ BOARD_KERNEL_CMDLINE += \
     swiotlb=2048 \
     kpti=off
 
+# Media
+TARGET_DISABLED_UBWC := true
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
@@ -170,3 +176,6 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Treble flag
 BOARD_VNDK_VERSION := current
+
+# Inherit from the proprietary version
+include vendor/xiaomi/fog/BoardConfigVendor.mk
