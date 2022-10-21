@@ -197,9 +197,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.sf.color_mode=9
-
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     persist.sys.sf.native_mode=2 \
