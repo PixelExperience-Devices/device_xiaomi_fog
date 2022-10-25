@@ -5,8 +5,6 @@
 /data/vendor/goodix(/.*)?                 u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/goodix/gf_data(/.*)?         u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/silead(/.*)?                 u:object_r:vendor_fingerprint_data_file:s0
-/mnt/vendor/persist/fpc(/.*)?             u:object_r:vendor_fingerprint_data_file:s0
-/mnt/vendor/persist/goodix(/.*)?          u:object_r:vendor_fingerprint_data_file:s0
 /sys/devices/platform/soc/soc:fpc1020(/.*?)  u:object_r:vendor_sysfs_fps_attr:s0
 
 # Fingerprint devices
