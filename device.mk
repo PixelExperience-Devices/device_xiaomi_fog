@@ -185,7 +185,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Dalvik - Use 64-bit dex2oat for better dexopt time.
 PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
-    
+
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
@@ -340,24 +340,16 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
+TARGET_NFC_SKU :=  c3qn
+
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
     android.hardware.secure_element@1.2-service \
-    com.android.nfc_extras \
     libchrome.vendor \
-    NfcNci \
-    SecureElement \
-    Tag
+    SecureElement
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.nfc.ese.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.nfc.uicc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.se.omapi.ese.xml \
-    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.se.omapi.uicc.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/com.android.nfc_extras.xml
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/android.hardware.nfc.uicc.xml
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.nfc.port=I2C \
@@ -415,6 +407,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     init \
     media-legacy \
+    nq-nfc \
     overlay \
     perf \
     telephony \
