@@ -188,6 +188,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 
 # Display
+TARGET_USE_QCOM_OFFSET := true
+
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     libdisplayconfig.qti \
