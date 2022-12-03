@@ -206,6 +206,7 @@ TARGET_USE_QCOM_OFFSET := true
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     libdisplayconfig.qti \
+    libdisplayconfig.system.qti \
     disable_configstore
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
