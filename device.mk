@@ -73,7 +73,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ODM_PROPERTIES += \
     aaudio.mmap_policy=2 \
-    ro.vendor.audio.sdk.fluencetype=none
+    ro.vendor.audio.sdk.fluencetype=none \
+    vendor.audio.hw.aac.encoder=false
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.media_vol_default=8 \
