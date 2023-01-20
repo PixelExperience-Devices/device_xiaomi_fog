@@ -375,6 +375,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureOverlay \
     FogCarrierConfigOverlay \
     FogFrameworksOverlay \
     FogSettingsOverlay \
