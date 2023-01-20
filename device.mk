@@ -485,7 +485,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.sensors.debug.ssc_qmi_debug=true \
     persist.vendor.sensors.enable.bypass_worker=true \
     persist.vendor.sensors.enable.rt_task=false \
-    persist.vendor.sensors.hal_trigger_ssr=false \
     persist.vendor.sensors.support_direct_channel=false
 
 # SoC
