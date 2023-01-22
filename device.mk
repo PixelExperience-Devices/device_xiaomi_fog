@@ -433,7 +433,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     init \
     media \
-    nq-nfc \
+    nfc \
     overlay \
     perf \
     telephony \
