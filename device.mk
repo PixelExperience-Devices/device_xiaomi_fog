@@ -52,6 +52,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     nfc
 
 TARGET_NFC_SKU :=  c3qn
+TARGET_USES_PN5XX_HAL := true
 
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2-service \
@@ -64,7 +65,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPAFogFrameworksOverlay \
     FogFrameworksOverlay \
     FogPowerFrameworksOverlay \
     FogSettingsOverlay \

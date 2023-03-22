@@ -1,0 +1,20 @@
+[
+   {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_xiaomi_fog-kernel",
+       "target_path" : "device/xiaomi/fog-kernel",
+       "branch"      : "thirteen"
+   },
+   {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_xiaomi_sm6225-common",
+       "target_path" : "device/xiaomi/sm6225-common",
+       "branch"      : "thirteen"
+   },
+   {
+       "remote"      : "pixel-devices-blobs",
+       "repository"  : "vendor_xiaomi_fog",
+       "target_path" : "vendor/xiaomi/fog",
+       "branch"      : "thirteen"
+   }
+]
