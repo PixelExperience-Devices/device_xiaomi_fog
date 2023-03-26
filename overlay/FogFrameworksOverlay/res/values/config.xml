@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds.  Do not translate. -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
+         The N entries of this array define N + 1 control points as follows:
+         (1-based arrays)
+         Point 1:            (0, value[1]):             lux <= 0
+         Point 2:     (level[1], value[2]):  0        < lux <= level[1]
+         Point 3:     (level[2], value[3]):  level[2] < lux <= level[3]
+         ...
+         Point N+1: (level[N], value[N+1]):  level[N] < lux
+         The control points must be strictly increasing.  Each control point
+         corresponds to an entry in the brightness backlight values arrays.
+         For example, if lux == level[1] (first element of the levels array)
+         then the brightness will be determined by value[2] (second element
+         of the brightness values array).
+         Spline interpolation is used to determine the auto-brightness
+         backlight values for lux levels between these control points.
+         Must be overridden in platform specific overlays -->
+     <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+        <item>80</item>
+        <item>85</item>
+        <item>90</item>
+        <item>95</item>
+        <item>100</item>
+        <item>120</item>
+        <item>140</item>
+        <item>160</item>
+        <item>180</item>
+        <item>200</item>
+        <item>220</item>
+        <item>240</item>
+        <item>260</item>
+        <item>280</item>
+        <item>300</item>
+        <item>320</item>
+        <item>340</item>
+        <item>360</item>
+        <item>380</item>
+        <item>400</item>
+        <item>420</item>
+        <item>440</item>
+        <item>460</item>
+        <item>480</item>
+        <item>500</item>
+        <item>700</item>
+        <item>900</item>
+        <item>1100</item>
+        <item>1300</item>
+        <item>1500</item>
+        <item>1700</item>
+        <item>1900</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+        <item>3500</item>
+        <item>4000</item>
+        <item>4500</item>
+    </integer-array>
+
+    <!-- Array of desired screen brightness in nits corresponding to the lux values
+        in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
+        config_screenBrightnessMaximumNits, the display brightness is defined as the measured
+        brightness of an all-white image.
+        If this is defined then:
+         - config_autoBrightnessLcdBacklightValues should not be defined
+         - config_screenBrightnessNits must be defined
+         - config_screenBrightnessBacklight must be defined
+        This array should have size one greater than the size of the config_autoBrightnessLevels
+        array. The brightness values must be non-negative and non-decreasing. This must be
+        overridden in platform specific overlays -->
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>3.5</item>
+        <item>4.8</item>
+        <item>6.0</item>
+        <item>15.0</item>
+        <item>21.0</item>
+        <item>27.0</item>
+        <item>36.0</item>
+        <item>52.0</item>
+        <item>71.0</item>
+        <item>87.0</item>
+        <item>97.0</item>
+        <item>98.0</item>
+        <item>98.0</item>
+        <item>98.0</item>
+        <item>99.0</item>
+        <item>99.0</item>
+        <item>100.0</item>
+        <item>100.0</item>
+        <item>100.0</item>
+        <item>101.0</item>
+        <item>101.0</item>
+        <item>102.0</item>
+        <item>103.0</item>
+        <item>103.0</item>
+        <item>103.0</item>
+        <item>106.0</item>
+        <item>108.0</item>
+        <item>110.0</item>
+        <item>112.0</item>
+        <item>114.0</item>
+        <item>116.0</item>
+        <item>118.0</item>
+        <item>119.0</item>
+        <item>122.0</item>
+        <item>123.0</item>
+        <item>125.0</item>
+        <item>128.0</item>
+        <item>130.0</item>
+        <item>131.0</item>
+        <item>134.0</item>
+        <item>136.0</item>
+        <item>137.0</item>
+        <item>140.0</item>
+        <item>142.0</item>
+        <item>144.0</item>
+        <item>169.0</item>
+        <item>196.0</item>
+        <item>222.0</item>
+        <item>248.0</item>
+        <item>270.0</item>
+        <item>300.0</item>
+        <item>320.0</item>
+        <item>335.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+    </array>
+
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display. Optionally, you can append either `@left` or `@right` to the
+         end of the path string, in order to change the path origin to either the top left,
+         or top right of the display.
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+         Example for a 10px x 10px square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
+         Example for a 10dp x 10dp square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
+         @see https://www.w3.org/TR/SVG/paths.html#PathData
+         -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -40 V 49 H 40 V 0 H 0 Z</string>
+
+    <!-- Whether the display cutout region of the main built-in display should be forced to
+        black in software (to avoid aliasing or emulate a cutout that is not physically existent).
+    -->
+    <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
+    
+</resources>

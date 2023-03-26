@@ -1,0 +1,25 @@
+<manifest version="1.0" type="device" target-level="5">
+    <kernel target-level="5"/>
+    <hal format="hidl">
+        <name>com.fingerprints.extension</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFingerprintNavigation</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintSensorTest</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.silead.hardware.fingerprintext</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISileadFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
