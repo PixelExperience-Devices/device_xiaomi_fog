@@ -59,6 +59,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PACKAGES += \
     AOSPAFogFrameworksOverlay \
     FogFrameworksOverlay \
+    FogPowerFrameworksOverlay \
     FogSettingsOverlay \
     FogSystemUIOverlay \
     FogWifiOverlay \
