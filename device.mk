@@ -19,6 +19,10 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+    
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1650
 TARGET_SCREEN_WIDTH := 720
